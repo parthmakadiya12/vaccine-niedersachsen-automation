@@ -5,7 +5,7 @@ Note:- Please use it at your own risk. I am not responsible for any consequences
 #### How to setup ?
 - Prerequisit 
     - [Nodejs](https://nodejs.org/en/)
-- clone the project by `https://github.com/parthmakadiya12/vaccine-niedersachsen-poll.git`
+- clone the project by `https://github.com/parthmakadiya12/vaccine-niedersachsen-automation.git`
 - go to project directory inside terminal/cmd
 - run `npm install` or `yarn`
 - create your env file. see below steps.
