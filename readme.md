@@ -14,7 +14,6 @@ Note:- Please use it at your own risk. I am not responsible for any consequences
 - also modify the value other variables defined in .env file
 - run `npm run start` or `yarn start`
 
-
 #### How to create .env file ?
 - rename `env.txt` to `.env`
 - open telegram 
@@ -27,6 +26,13 @@ Note:- Please use it at your own risk. I am not responsible for any consequences
 NOTE: Please do not use less than 1 minute on the schedule time for 2 reasons
     - Your IP will be blacklisted by `impfportal-niedersachsen.de`
     - For ethical reasons. (use one minute or more only)
+
+#### How to run with docker ?
+- create .env file. (see above step)
+- You need docker in your machine.
+- open project inside terminal.
+- build the image by `docker build -t vaccine_automation .`
+- run the project by `docker run vaccine_automation`
 
 #### What to do if my IP get blacklisted (3 ways you can use again)
 - disconnect the VPN and reconnect. You will get a new IP so basically you will use services again normally.
