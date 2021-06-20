@@ -46,11 +46,23 @@ const checkVaccineAvalible = async () => {
       );
     });
   } else {
-    console.log(new Date().toISOString(), " No Slots avalilible");
+    console.log(
+      new Date().toISOString(),
+      " No Slots avalilible ->",
+      res.data.resultList[0].outOfStock
+    );
   }
 };
-
-const cronJob = cron.job("*/10 * * * * *", async () => {
+const cronTime = {
+  oneSecond: "* * * * * *",
+  tenSecond: "*/10 * * * * *",
+  thirtySecond: "*/30 * * * * *",
+  oneMinute: "*/1 * * * *",
+  twoMinute: "*/2 * * * *",
+  fiveMinute: "*/5 * * * *",
+  tenMinute: "*/10 * * * *",
+};
+const cronJob = cron.job(cronTime[process.env.SCHEDULE_TIME], async () => {
   // console.log("RUNNING CRON");
   try {
     await checkVaccineAvalible();
